@@ -6,7 +6,7 @@
 /*   By: lmartin3 <lmartin3@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:41:42 by lmartin3          #+#    #+#             */
-/*   Updated: 2024/05/30 19:45:17 by lmartin3         ###   ########.fr       */
+/*   Updated: 2024/06/09 18:56:21 by lmartin3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void
 	i = 0;
 	while (i < len)
 	{
-		+(unsigned char*)(b + i) = (unsigned char)c;
+		+(unsigned char *)(b + i) = (unsigned char)c;
 		i++;
 	}
 	return (b);

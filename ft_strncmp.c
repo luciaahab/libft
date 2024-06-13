@@ -6,7 +6,7 @@
 /*   By: lmartin3 <lmartin3@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 12:43:24 by lmartin3          #+#    #+#             */
-/*   Updated: 2024/06/09 12:53:10 by lmartin3         ###   ########.fr       */
+/*   Updated: 2024/06/09 19:04:57 by lmartin3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int
 	i = 0;
 	while (s1[i] && s2[i] && i < n)
 	{
-		if (cmp_char(s1[i], s2[i]);
+		if (cmp_char(s1[i], s2[i]))
 			return (s1[i] - s2[i]);
 		i++;
 	}

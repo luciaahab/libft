@@ -6,7 +6,7 @@
 /*   By: lmartin3 <lmartin3@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:48:25 by lmartin3          #+#    #+#             */
-/*   Updated: 2024/05/30 19:51:51 by lmartin3         ###   ########.fr       */
+/*   Updated: 2024/06/13 13:42:52 by lmartin3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 void
 	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s)
 		return ;
 	i = 0;
 	while (i < n)
 	{
-		*(char*)(s + i) = 0;
+		*(char *)(s + i) = 0;
 		i++;
 	}
-}			
+}

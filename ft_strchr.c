@@ -6,7 +6,7 @@
 /*   By: lmartin3 <lmartin3@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:50:12 by lmartin3          #+#    #+#             */
-/*   Updated: 2024/06/09 12:31:16 by lmartin3         ###   ########.fr       */
+/*   Updated: 2024/06/09 18:57:26 by lmartin3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i++;
 	}
 	if (s[i] == (char)c)
-		return ((char*)(s + i));
+		return ((char *)(s + i));
 	return (NULL);
 }
