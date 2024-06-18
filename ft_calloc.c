@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin3 <lmartin3@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 12:09:37 by lmartin3          #+#    #+#             */
-/*   Updated: 2024/06/18 20:46:57 by lmartin3         ###   ########.fr       */
+/*   Created: 2024/06/18 12:37:23 by lmartin3          #+#    #+#             */
+/*   Updated: 2024/06/18 12:40:27 by lmartin3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*compara los primeros n bytes de dos áreas de memoria: s1 y s2*/
-
 #include "libft.h"
 
-int
-	ft_memcmp(const void *s1, const void *s2, size_t n)
+void
+	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
+	void	*ptr;
 
-	i = 0;
-	while (i < n)
-	{
-		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
-			return (*(unsigned char)(s1 + i) - *(unsigned char *) (s2 + i));
-		i++;
-	}
-	return (0);
+	ptr = (void *)malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count);
+	return (ptr);
 }

@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin3 <lmartin3@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 12:09:37 by lmartin3          #+#    #+#             */
-/*   Updated: 2024/06/18 20:46:57 by lmartin3         ###   ########.fr       */
+/*   Created: 2024/06/18 12:41:19 by lmartin3          #+#    #+#             */
+/*   Updated: 2024/06/18 12:52:19 by lmartin3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*compara los primeros n bytes de dos áreas de memoria: s1 y s2*/
-
 #include "libft.h"
 
-int
-	ft_memcmp(const void *s1, const void *s2, size_t n)
+char
+	*ft_strdup(const char *s1)
 {
+	char	*str;
 	size_t	i;
 
+	if (!s1)
+		retun(NULL);
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (s1[i])
 	{
-		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
-			return (*(unsigned char)(s1 + i) - *(unsigned char *) (s2 + i));
+		str[i] = s1[i];
 		i++;
 	}
-	return (0);
+	str[i] = 0;
+	return (str);
 }
