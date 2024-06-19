@@ -27,14 +27,3 @@ void
 	}
 	return (b);
 }
-
-int main()
-{
-    char str[50] = "Hello, World!";
-
-	printf("Before memset: %s\n", str);
-
-    		ft_memset(str, '*', 5);
-    		printf("After memset: %s\n",	str);
-	return (0);
-}

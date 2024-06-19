@@ -33,6 +33,6 @@ int
 		i++;
 	}
 	if (i < n)
-		return (cmp_char(s1[1] - s2[i]));
+		return (cmp_char(s1[i], s2[i]));
 	return (0);
 }
